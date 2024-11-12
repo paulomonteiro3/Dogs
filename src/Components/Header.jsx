@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-import Dog from '../Assets/dogs.svg?react';
+import Dogs from '../Assets/dogs.svg?react';
 import { UserContext } from '../UserContext';
 
 const Header = () => {
   const { data } = React.useContext(UserContext);
-  console.log(data);
+
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <Link className={styles.logo} to="/" aria-label="Dogs - Home">
-          <Dog />
+          <Dogs />
         </Link>
         {data ? (
           <Link className={styles.login} to="/conta">

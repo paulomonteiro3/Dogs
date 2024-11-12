@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 const useMedia = (media) => {
-  const [match, setMatch] = React.useState(null)
+  const [match, setMatch] = React.useState(null);
 
   React.useEffect(() => {
     function changeMatch() {
-      const {matches} = window.matchMedia(media)
-      setMatch(matches)
+      const { matches } = window.matchMedia(media);
+      setMatch(matches);
     }
-    changeMatch()
-    window.addEventListener('resize', changeMatch)
+    changeMatch();
+    window.addEventListener('resize', changeMatch);
     return () => {
-      window.removeEventListener('resize', changeMatch)
-    }
-  }, [media])
-  return match
-}
+      window.removeEventListener('resize', changeMatch);
+    };
+  }, [media]);
 
-export default useMedia
+  return match;
+};
+
+export default useMedia;

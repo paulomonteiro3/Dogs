@@ -3,7 +3,6 @@ import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
 import { useLocation } from 'react-router-dom';
 
-
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
   const location = useLocation();
@@ -15,10 +14,10 @@ const UserHeader = () => {
         setTitle('Poste Sua Foto');
         break;
       case '/conta/estatisticas':
-        setTitle('Estatisticas');
+        setTitle('Estatísticas');
         break;
       default:
-        setTitle('Minha conta');
+        setTitle('Minha Conta');
     }
   }, [location]);
 
