@@ -25,7 +25,7 @@ const LoginForm = () => {
 
   return (
     <section className="animeLeft">
-      <Head title="Login" />
+      <Head title='Login' />
       <h1 className="title">Login</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
@@ -35,7 +35,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error && 'Dados incorretos.'} />
+        <Error error={error && 'Dados Incorretos.'} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a Senha?

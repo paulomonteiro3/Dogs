@@ -15,7 +15,8 @@ const FeedModal = ({ photo, setModalPhoto }) => {
   }, [photo, request]);
 
   function handleOutsideClick(event) {
-    if (event.target === event.currentTarget) setModalPhoto(null);
+    if(event.target === event.currentTarget)
+      setModalPhoto(null)
   }
 
   return (
