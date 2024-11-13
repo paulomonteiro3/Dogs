@@ -5,6 +5,7 @@ import useFetch from "../../Hooks/useFetch";
 import PhotoContent from "./PhotoContent";
 import { useParams } from "react-router-dom";
 import Loading from "../Helper/Loading";
+import Head from "../Helper/Head";
 
 const Photo = () => {
   const { id } = useParams();
@@ -17,7 +18,13 @@ const Photo = () => {
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
-  if (data) return <section className="container mainContainer"><PhotoContent single={true} data={data} /></section>;
+  if (data)
+    return (
+      <section className="container mainContainer">
+        <Head title={data.photo.title} />
+        <PhotoContent single={true} data={data} />
+      </section>
+    );
   else return null;
 };
 
